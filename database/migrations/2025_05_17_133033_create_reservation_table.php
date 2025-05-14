@@ -8,8 +8,7 @@ return new class extends Migration
 {
     public function up() {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('id')->autoIncrement();
+            $table->id(); // This is enough for the primary key
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('car_id');
             $table->date('reservation_date');
@@ -20,7 +19,6 @@ return new class extends Migration
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
         });
     }
-    
 
     public function down(): void
     {

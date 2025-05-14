@@ -1,0 +1,54 @@
+Canoy, Lyle Steve Q. BSIT 2-B
+
+Project Name: Customer Agent Sales Car
+2.1.1 List of Features:
+2.1.1.1 Authentication
+2.1.1.1.1 Register Assign Role on Register (Admin, User, Customer)
+2.1.1.1.2 Login
+2.1.1.1.3 Logout
+
+2.1.1.2 Agent Data
+2.1.1.2.1 Get Customer Data
+2.1.1.2.2 Add Customer Data
+2.1.1.2.3 Edit Customer Data
+2.1.1.2.4 Delete Customer Data
+
+2.1.1.4 Product Vehicle Selection & Comparison
+2.1.1.4.1 Display Available Cars
+2.1.1.4.2 Compare Features & Pricing
+2.1.1.4.3 Customer Preferences & Customization
+
+2.1.1.11 Reservation Page
+2.1.1.11.1 View Available Cars for Reservation
+2.1.1.11.2 Add Reservation
+2.1.1.11.3 Edit Reservation
+2.1.1.11.4 Delete Reservation
+
+
+ROLES PAGE
+2.1.1.1.5.1 Get Roles Data (Admin/Agent/Customer)
+2.1.1.1.5.2 Add Role
+2.1.1.1.5.3 Edit Role
+2.1.1.1.5.4 Delete Role
+2.1.1.1.5.5 Assign Role to User
+
+USERS PAGE
+2.1.1.1.6.1 Get Customer Data
+2.1.1.1.6.2 Add Customer Data
+2.1.1.1.6.3 Get Sales Agent Data (by ID)
+2.1.1.1.6.4 Edit Customer Data
+2.1.1.1.6.5 Delete Customer Data
+
+
+User Status
+Add user status
+View user
+Update user status
+Delete user status
+
+2.1.1.10.3 Change Password
+2.1.1.10.3.1 Enter Old Password
+2.1.1.10.3.2 Enter New Password
+2.1.1.10.3.3 Confirm New Password
+2.1.1.10.3.4 Save Changes
+2.1.1.10.4 Logout

@@ -17,17 +17,21 @@ class ReservationController extends Controller
     // Store a new reservation
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
             'car_id' => 'required|exists:cars,id',
             'reservation_date' => 'required|date',
             'status' => 'required|string'
         ]);
-
-        $reservation = Reservation::create($request->all());
-
-        return response()->json(['message' => 'Reservation created', 'reservation' => $reservation], 201);
+    
+        $reservation = Reservation::create($validated);
+    
+        return response()->json([
+            'message' => 'Reservation created',
+            'reservation' => $reservation
+        ], 201);
     }
+    
 
     // Update a reservation
     public function update(Request $request, $id)

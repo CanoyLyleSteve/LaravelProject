@@ -9,11 +9,15 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
+    public function up() {
         Schema::create('agents', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');  // Ensure that user_id is of the correct type
+            $table->string('agency_name');
             $table->timestamps();
+
+            // Add the foreign key constraint after confirming the user_id column type
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

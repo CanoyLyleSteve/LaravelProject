@@ -16,3 +16,4 @@ class Car extends Model
         'is_available'
     ];
 }
+    

@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\RoleController;
 
 
 // Public routes
@@ -33,11 +34,17 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/edit-cars/{id}', [CarController::class, 'update']);
     Route::delete('/delete-cars/{id}', [CarController::class, 'destroy']);
 
-    Route::get('/get-reservation-statuses', [ReservationStatusesController::class, 'getReservationStatuses']);
-    Route::post('/add-reservation-status', [ReservationStatusesController::class, 'addReservationStatus']);
-    Route::put('/edit-reservation-status/{id}', [ReservationStatusesController::class, 'editReservationStatus']);
-    Route::delete('/delete-reservation-status/{id}', [ReservationStatusesController::class, 'deleteReservationStatus']);
+    Route::get('/reservations', [ReservationController::class, 'index']);
+    Route::post('/add-reservations', [ReservationController::class, 'store']);
+    Route::put('/edit-reservations/{id}', [ReservationController::class, 'update']);
+    Route::delete('/delete-reservations/{id}', [ReservationController::class, 'destroy']);
 
 
+    Route::get('/get-roles', [RoleController::class, 'index']);          
+    Route::post('/add-role', [RoleController::class, 'store']);        
+    Route::get('/search-role/{id}', [RoleController::class, 'show']);     
+    Route::put('/edit-role/{id}', [RoleController::class, 'update']);    
+    Route::delete('/delete-role/{id}', [RoleController::class, 'destroy']); 
+    
     Route::post('/logout', [AuthenticationController::class, 'logout']);
 });
